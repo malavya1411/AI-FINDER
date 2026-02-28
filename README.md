@@ -1,14 +1,12 @@
-# 🤖 Agent Finder
+# Agent Finder
 
 > **Find the perfect AI agent for your problem — instantly.**
 
 Agent Finder is a smart AI agent discovery platform that takes your problem as input and recommends the best AI tools, generates a ready-to-use prompt tailored for your chosen agent, and suggests the right tech stack if you're building something. Built with a sleek dark UI, it cuts through the noise of hundreds of AI tools and points you to exactly what you need.
 
-![Agent Finder Screenshot](public/preview.png)
-
 ---
 
-## ✨ Features
+## Features
 
 - **Smart Agent Recommender** — Describe your problem in plain English, get ranked AI agent recommendations with confidence scores and reasoning
 - **Post-Selection Prompt Refinement** — Pick an agent, then answer a few quick questions to get a fully personalized, copy-ready prompt for that specific agent
@@ -24,7 +22,7 @@ Agent Finder is a smart AI agent discovery platform that takes your problem as i
 
 ---
 
-## 🗂️ Agent Categories
+## Agent Categories
 
 | Category | Example Agents |
 |---|---|
@@ -41,7 +39,7 @@ Agent Finder is a smart AI agent discovery platform that takes your problem as i
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend** — React 18 + TypeScript
 - **Bundler** — Vite
@@ -94,13 +92,13 @@ See [SECURITY.md](./SECURITY.md) for the full security policy and responsible di
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome. Please open an issue first to discuss what you'd like to change. Pull requests should be made against the `main` branch.
 
 ---
 
-## 👤 Author
+## Author
 
 **Malavya** — [@malavya1411](https://github.com/malavya1411)
 
