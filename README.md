@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# 🤖 Agent Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Find the perfect AI agent for your problem — instantly.**
 
-Currently, two official plugins are available:
+Agent Finder is a smart AI agent discovery platform that takes your problem as input and recommends the best AI tools, generates a ready-to-use prompt tailored for your chosen agent, and suggests the right tech stack if you're building something. Built with a sleek dark UI, it cuts through the noise of hundreds of AI tools and points you to exactly what you need.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Agent Finder Screenshot](public/preview.png)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Smart Agent Recommender** — Describe your problem in plain English, get ranked AI agent recommendations with confidence scores and reasoning
+- **Post-Selection Prompt Refinement** — Pick an agent, then answer a few quick questions to get a fully personalized, copy-ready prompt for that specific agent
+- **Tech Stack Suggester** — For app-building tasks, get a recommended tech stack alongside your agent picks
+- **Agent Directory** — Browse 80+ AI agents across 10 categories with filters for pricing, access type, and use case
+- **Agent Comparison** — Select 2–3 agents and compare them side by side on capabilities, pricing, and LLM support
+- **Agent of the Week** — Featured trending agent on the homepage
+- **Community & Use Cases** — Browse and share real-world agent workflows and success stories
+- **Live Status Dashboard** — Real-time uptime and latency for popular agents
+- **Query History** — All your past searches saved and accessible
+- **Verified Badges & Ratings** — Community ratings and team-verified badges on agent listings
+- **Dark Theme** — Deep navy aesthetic with glassmorphism cards throughout
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🗂️ Agent Categories
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Category | Example Agents |
+|---|---|
+| Code Assistant | GitHub Copilot, Cursor, Replit AI, Devin |
+| Image Generation | Midjourney, DALL·E 3, Leonardo AI, Ideogram |
+| Writing & Content | Jasper, Notion AI, Sudowrite, Copy.ai |
+| Data Analysis | Julius AI, Perplexity AI, Elicit, Consensus |
+| Web Building | Lovable, Bolt.new, Framer AI, Webflow AI |
+| Video & Audio | Runway ML, ElevenLabs, HeyGen, Suno |
+| Automation | Zapier AI, n8n, Make, Bardeen |
+| Chatbot | Intercom Fin, Voiceflow, Botpress |
+| Research | Perplexity, Claude, Gemini, You.com |
+| Design & UI/UX | Galileo AI, Uizard, Magician for Figma |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend** — React 18 + TypeScript
+- **Bundler** — Vite
+- **Styling** — CSS / Tailwind
+- **AI** — Gemini API (free tier)
+- **Linting** — ESLint with TypeScript rules
+
+## 📁 Project Structure
+
+```
+AI-FINDER/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Route-level pages
+│   ├── data/            # Agent database
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # API helpers and utilities
+│   └── main.tsx         # App entry point
+├── .env                 # Environment variables (do not commit)
+├── .gitignore
+├── index.html
+├── vite.config.ts
+└── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🔒 Security
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project follows OWASP best practices:
+
+- All API keys are stored in environment variables and never exposed client-side
+- Rate limiting is applied on all AI-powered endpoints
+- Input validation and sanitization on all user inputs
+- HTTP security headers configured
+- Row-level security enabled on the database
+
+See [SECURITY.md](./SECURITY.md) for the full security policy and responsible disclosure process.
+
+---
+
+## 🗺️ Roadmap
+
+- [ ] User authentication and saved preferences
+- [ ] Agent submission portal for developers
+- [ ] Try It Now sandbox (embedded agent API testing)
+- [ ] Multi-agent workflow builder
+- [ ] Mobile app
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome. Please open an issue first to discuss what you'd like to change. Pull requests should be made against the `main` branch.
+
+---
+
+## 👤 Author
+
+**Malavya** — [@malavya1411](https://github.com/malavya1411)
+
+---
+
+*Built during free-time development. If you find it useful, give it a ⭐ on GitHub!*
